@@ -1,0 +1,12 @@
+// Barrel re-exports for the SRD data modules.
+export * from './races.js'
+export * from './classes.js'
+export * from './backgrounds.js'
+export * from './pointbuy.js'
+export * from './subclasses.js'
+export * from './spellcasting.js'
+export * from './progression.js'
+export * from './classFeatures.js'
+export * from './feats.js'
+export * from './armor.js'
+export * from './conditions.js'

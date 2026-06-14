@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Secrets — never commit the real .env
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.vscode/
+.DS_Store
+*.log
+
+# Claude Code tooling (installed skills, local agent files)
+.claude/
+
+# Copyrighted source material — do not publish
+*.pdf
+scripts/phb.txt

@@ -1,0 +1,51 @@
+/* Tailwind v4 is imported with a single line. */
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Dark fantasy theme tokens.
+   We expose a few custom colors so we can write `bg-ink`,
+   `text-gold`, `border-blood` etc. throughout the app.
+   --------------------------------------------------------------- */
+@theme {
+  --color-ink: #0a0a0f;        /* near-black page background */
+  --color-panel: #15151f;      /* card / panel background */
+  --color-panel-2: #1f1f2e;    /* slightly lighter panel */
+  --color-gold: #d4af37;       /* primary accent (gold) */
+  --color-gold-soft: #b8943020;/* faint gold for backgrounds */
+  --color-blood: #a01b1b;      /* danger / HP / DM accent */
+  --color-parchment: #e8e0cf;  /* main readable text */
+  --color-muted: #8a8a9a;      /* secondary text */
+  --font-display: 'Cinzel', ui-serif, Georgia, serif; /* chiseled heading font */
+}
+
+/* Base page styling */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-parchment);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* Dark vignette so the page edges fall into shadow. */
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, rgba(212, 175, 55, 0.06), transparent 60%),
+    radial-gradient(100% 100% at 50% 100%, rgba(160, 27, 27, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Chiseled serif for the big titles (the brand + view headers). */
+.font-display,
+h1 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+/* A subtle scrollbar that fits the dark theme */
+* {
+  scrollbar-color: var(--color-panel-2) transparent;
+}
