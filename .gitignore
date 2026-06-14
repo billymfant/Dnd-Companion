@@ -21,3 +21,6 @@ dist-ssr/
 # Copyrighted source material — do not publish
 *.pdf
 scripts/phb.txt
+
+# Stray screenshots dropped in the project root
+/image.png

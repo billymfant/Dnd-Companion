@@ -3,9 +3,11 @@
 A real-time web companion for a D&D group (5–6 players + 1 DM). Players see their own character
 sheet; the DM gets a dashboard with combat control. Everything syncs live via Supabase Realtime.
 
-**Phases 1–9 are built and verified.** Next up: self-service accounts + full character creation &
-lifecycle — see `docs/plans/2026-06-14-character-lifecycle-implementation-plan.md` and
-`docs/specs/2026-06-14-character-lifecycle-design.md`.
+**Phases 1–9 AND the self-service character lifecycle (S1–S7) are built and verified.** See
+`docs/PROJECT-STATUS.md` for current state + how to resume (esp. on a new machine). Design/plan refs:
+`docs/specs/2026-06-14-character-lifecycle-design.md`,
+`docs/plans/2026-06-14-character-lifecycle-implementation-plan.md`.
+Repo: https://github.com/billymfant/Dnd-Companion (push/pull to sync across machines).
 
 ## ⚠️ Environment rules (important)
 - **Project path:** `F:\APPS\DnD Companion`. The harness may report the cwd as the old
