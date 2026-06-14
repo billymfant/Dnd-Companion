@@ -1,0 +1,32 @@
+name: CI
+
+# Build + pure unit checks on every push / PR to main.
+# (The Playwright e2e suite needs a live Supabase project and a running dev
+#  server, so it is run locally — not in CI — to keep this fast and secret-free.)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (type/import sanity)
+        run: npm run build
+
+      - name: Rules engine unit checks
+        run: node scripts/test-rules.mjs
