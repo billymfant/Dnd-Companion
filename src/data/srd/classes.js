@@ -15,6 +15,8 @@ export const CLASSES = [
   {
     key: 'barbarian',
     name: 'Barbarian',
+    blurb: 'A raging frontline warrior who shrugs off blows.',
+    whenToPick: 'Good if you want to charge in and hit hard without much bookkeeping.',
     hitDie: 12,
     primaryAbility: ['strength'],
     savingThrows: ['strength', 'constitution'],
@@ -34,6 +36,8 @@ export const CLASSES = [
   {
     key: 'bard',
     name: 'Bard',
+    blurb: 'A charismatic performer who weaves magic through music, words, and wit.',
+    whenToPick: 'Good if you want to do a bit of everything — heal, inspire, cast spells, and talk your way out of trouble.',
     hitDie: 8,
     primaryAbility: ['charisma'],
     savingThrows: ['dexterity', 'charisma'],
@@ -53,6 +57,8 @@ export const CLASSES = [
   {
     key: 'cleric',
     name: 'Cleric',
+    blurb: 'A divine spellcaster who channels the power of a god to heal, protect, and smite.',
+    whenToPick: 'Good if you want to keep your friends alive while also packing a powerful spell list.',
     hitDie: 8,
     primaryAbility: ['wisdom'],
     savingThrows: ['wisdom', 'charisma'],
@@ -72,6 +78,8 @@ export const CLASSES = [
   {
     key: 'druid',
     name: 'Druid',
+    blurb: 'A nature guardian who calls on the wild to cast spells and transform into animals.',
+    whenToPick: 'Good if you want versatile nature magic and the ability to shapeshift into beasts.',
     hitDie: 8,
     primaryAbility: ['wisdom'],
     savingThrows: ['intelligence', 'wisdom'],
@@ -91,6 +99,8 @@ export const CLASSES = [
   {
     key: 'fighter',
     name: 'Fighter',
+    blurb: 'A disciplined martial expert who masters weapons, armor, and combat tactics.',
+    whenToPick: 'Good if you want a reliable, durable character with lots of ways to customise your fighting style.',
     hitDie: 10,
     primaryAbility: ['strength', 'dexterity'],
     savingThrows: ['strength', 'constitution'],
@@ -110,6 +120,8 @@ export const CLASSES = [
   {
     key: 'monk',
     name: 'Monk',
+    blurb: 'A martial artist who channels inner energy (ki) to strike fast and move like lightning.',
+    whenToPick: 'Good if you want a mobile, fist-fighting character who needs no weapons or armor.',
     hitDie: 8,
     primaryAbility: ['dexterity', 'wisdom'],
     savingThrows: ['strength', 'dexterity'],
@@ -129,6 +141,8 @@ export const CLASSES = [
   {
     key: 'paladin',
     name: 'Paladin',
+    blurb: 'A holy warrior bound by a sacred oath, combining heavy armor with divine spells.',
+    whenToPick: 'Good if you want to be the team\'s inspiring leader — tough in a fight and able to heal allies.',
     hitDie: 10,
     primaryAbility: ['strength', 'charisma'],
     savingThrows: ['wisdom', 'charisma'],
@@ -148,6 +162,8 @@ export const CLASSES = [
   {
     key: 'ranger',
     name: 'Ranger',
+    blurb: 'A skilled hunter and tracker who blends martial prowess with a dash of nature magic.',
+    whenToPick: 'Good if you want a self-reliant outdoors warrior who is deadly against a chosen type of enemy.',
     hitDie: 10,
     primaryAbility: ['dexterity', 'wisdom'],
     savingThrows: ['strength', 'dexterity'],
@@ -167,6 +183,8 @@ export const CLASSES = [
   {
     key: 'rogue',
     name: 'Rogue',
+    blurb: 'A cunning trickster who excels at stealth, skills, and deadly sneak attacks.',
+    whenToPick: 'Good if you want to be the team\'s skill expert — picking locks, disabling traps, and striking from the shadows.',
     hitDie: 8,
     primaryAbility: ['dexterity'],
     savingThrows: ['dexterity', 'intelligence'],
@@ -188,6 +206,8 @@ export const CLASSES = [
   {
     key: 'sorcerer',
     name: 'Sorcerer',
+    blurb: 'A natural-born spellcaster whose magic flows from innate power rather than study.',
+    whenToPick: 'Good if you want a simpler caster — fewer spells to manage, but you can twist them in ways other casters cannot.',
     hitDie: 6,
     primaryAbility: ['charisma'],
     savingThrows: ['constitution', 'charisma'],
@@ -207,6 +227,8 @@ export const CLASSES = [
   {
     key: 'warlock',
     name: 'Warlock',
+    blurb: 'A pact-maker who gains dark magical power from a powerful patron entity.',
+    whenToPick: 'Good if you want a mysterious, flavourful caster whose spell slots recharge every short rest.',
     hitDie: 8,
     primaryAbility: ['charisma'],
     savingThrows: ['wisdom', 'charisma'],
@@ -226,6 +248,8 @@ export const CLASSES = [
   {
     key: 'wizard',
     name: 'Wizard',
+    blurb: 'A learned scholar of the arcane arts with the widest spell list in the game.',
+    whenToPick: 'Good if you want to prepare the right spell for every situation and love the idea of a magic spellbook.',
     hitDie: 6,
     primaryAbility: ['intelligence'],
     savingThrows: ['intelligence', 'wisdom'],

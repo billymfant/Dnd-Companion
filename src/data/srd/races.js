@@ -14,6 +14,8 @@ export const RACES = [
   {
     key: 'dwarf',
     name: 'Dwarf',
+    blurb: 'Tough, traditional folk at home in mountains and mines.',
+    whenToPick: 'Good if you want to be sturdy and hard to take down.',
     abilityBonuses: { constitution: 2 },
     speed: 25,
     size: 'Medium',
@@ -47,6 +49,8 @@ export const RACES = [
   {
     key: 'elf',
     name: 'Elf',
+    blurb: 'Graceful and long-lived people with keen senses and a natural affinity for magic.',
+    whenToPick: 'Good if you want to be quick and perceptive, with a touch of magic in your heritage.',
     abilityBonuses: { dexterity: 2 },
     speed: 30,
     size: 'Medium',
@@ -83,6 +87,8 @@ export const RACES = [
   {
     key: 'halfling',
     name: 'Halfling',
+    blurb: 'Small, cheerful folk who are surprisingly lucky and hard to frighten.',
+    whenToPick: 'Good if you want a nimble character who shrugs off bad luck and never panics.',
     abilityBonuses: { dexterity: 2 },
     speed: 25,
     size: 'Small',
@@ -110,6 +116,8 @@ export const RACES = [
   {
     key: 'human',
     name: 'Human',
+    blurb: 'The most common people in the world — adaptable, ambitious, and well-rounded.',
+    whenToPick: 'Good if you want a boost to every ability score and no weaknesses — great for any class.',
     abilityBonuses: { strength: 1, dexterity: 1, constitution: 1, intelligence: 1, wisdom: 1, charisma: 1 },
     speed: 30,
     size: 'Medium',
@@ -120,6 +128,8 @@ export const RACES = [
   {
     key: 'dragonborn',
     name: 'Dragonborn',
+    blurb: 'Proud dragon-descended warriors who can breathe elemental energy.',
+    whenToPick: 'Good if you want a powerful, intimidating character with a built-in breath weapon.',
     abilityBonuses: { strength: 2, charisma: 1 },
     speed: 30,
     size: 'Medium',
@@ -134,6 +144,8 @@ export const RACES = [
   {
     key: 'gnome',
     name: 'Gnome',
+    blurb: 'Clever, curious little inventors with an innate resistance to magic.',
+    whenToPick: 'Good if you want a smart, creative character who is surprisingly hard to affect with spells.',
     abilityBonuses: { intelligence: 2 },
     speed: 25,
     size: 'Small',
@@ -167,6 +179,8 @@ export const RACES = [
   {
     key: 'half-elf',
     name: 'Half-Elf',
+    blurb: 'Charming and versatile people who blend human ambition with elven grace.',
+    whenToPick: 'Good if you want a social character who can also pick up two bonus skill proficiencies of your choice.',
     abilityBonuses: { charisma: 2 },
     choiceBonuses: { count: 2, amount: 1, exclude: ['charisma'] },
     speed: 30,
@@ -183,6 +197,8 @@ export const RACES = [
   {
     key: 'half-orc',
     name: 'Half-Orc',
+    blurb: 'Strong, fierce warriors who can push past the brink of death on sheer determination.',
+    whenToPick: 'Good if you want a ferocious front-line fighter who refuses to go down.',
     abilityBonuses: { strength: 2, constitution: 1 },
     speed: 30,
     size: 'Medium',
@@ -199,6 +215,8 @@ export const RACES = [
   {
     key: 'tiefling',
     name: 'Tiefling',
+    blurb: 'Infernal-blooded folk with an unsettling aura, dark magic, and fire resistance.',
+    whenToPick: 'Good if you want a charismatic character with innate spells and a dramatic, mysterious look.',
     abilityBonuses: { intelligence: 1, charisma: 2 },
     speed: 30,
     size: 'Medium',
