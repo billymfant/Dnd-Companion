@@ -1,0 +1,287 @@
+LOST IN THE HIGH FOREST — A Five-Page Module
+by Fred Love
+"Explore the wonders and dangers of an enchanted forest in this adventure for 6th level characters."
+
+(Clean transcript read from the rendered page images lhf-page-1..6.png — the original
+PDF text layer failed to extract. Source of truth for scripts/import-lhf.mjs.)
+
+============================================================
+OPENING QUOTE
+============================================================
+"The sheer age and the power of the trees, the depth of their roots, and the wind whispering through their
+leaves — all these things call to us."
+  — Aestyn Graymantle, Far from the Misty Hills
+
+============================================================
+SUMMARY
+============================================================
+This adventure module expands on the brief material contained in chapter 3 of Storm King's Thunder
+concerning the High Forest and Shadowtop Cathedral. For an overview of the area, consult that chapter.
+
+This scenario tasks a party of 6th level adventurers to travel to Shadowtop Cathedral, a wondrous
+formation of ancient trees located deep in the High Forest, to meet Turlang, a treant aligned with the
+Emerald Enclave. Dungeon Masters may decide on a hook for why the party would wish to speak to Turlang.
+It may be to deliver a message or to ask for the Emerald Enclave's help in dealing with an approaching
+danger. If possible, Dungeon Masters should choose a hook that carries some personal relevance to some or
+all of the player characters.
+
+The party will have to navigate the dense and often bewildering maze of foliage that makes up the fabric
+of the High Forest, beginning with the forest's outer reaches. The party may become lost and run up
+against randomly generated encounters, some of which will pose a danger while others may present mysteries
+and role-playing opportunities. The forest immediately surrounding Shadowtop Cathedral grows even thicker,
+and awakened plants actively disguise the trail to prevent intrusions. This makes navigation more difficult.
+
+When the player characters arrive at Shadowtop Cathedral, they learn that Turlang hasn't been seen for
+several days. The party soon finds that Turlang has been attacked by a rogue druid named Aerglas, who is
+acting under the influence of an evil kraken. If the player characters can save Turlang, he will reward
+them handsomely.
+
+============================================================
+NAVIGATING THE HIGH FOREST
+============================================================
+This forest's thick canopy allows for little light to find its way to the forest floor, making it difficult
+for adventurers to find their way using the sun or stars. In addition, strange creatures, magical wards and
+nigh-impenetrable foliage obscure paths and create confusion for travelers.
+
+Accordingly, Dungeon Masters occasionally should call for one player character of the party's choosing to
+make a DC 15 Wisdom (Nature) check to determine if the party stays on its desired path or becomes lost.
+Traveling in the deep forest imposes disadvantage on the check due to Emerald Enclave agents intentionally
+hiding the path to Shadowtop Cathedral.
+
+If the party fails a navigation check and becomes lost, Dungeon Masters should determine the consequences
+by rolling on the High Forest Random Encounters Table in the next section. Dungeon Masters may ask for
+navigation checks as often or as seldom as they like, though it's recommended that the adventurers make at
+least two successful checks to pass from the outer forest to the deep forest and at least one successful
+check inside the deep forest to find the entrance to Shadowtop Cathedral.
+
+Distance and Travel Times
+Roughly 25 miles of dense woodlands separate Shadowtop Cathedral from the forest's nearest border along the
+Evermoor Road. Adventurers can travel 12-15 miles in eight hours in the difficult terrain of the forest,
+meaning the party may stop to camp for at least one night. In that case, Dungeon Masters may run the
+Overnight Encounter included later in this module or roll for a random encounter.
+
+If the party decides to continue traveling beyond eight hours without a rest, each player character must
+make a Constitution saving throw of DC 10 +1 for each hour after eight hours of travel. A player character
+takes one level of exhaustion on a failed save.
+
+============================================================
+OUTER FOREST
+============================================================
+Once the party is ready to enter the High Forest, the Dungeon Master should read or paraphrase the
+following text and then call for the first Wisdom (Survival) check. If the party successfully makes the
+check, the Dungeon Master should run the Unicorn in Mourning encounter below. If the party fails the check,
+the Dungeon Master should roll on the High Forest Random Encounters Table.
+
+  The trail you've been following enters the High Forest through an ornate archway carved directly into the
+  living wood of an immense tree trunk. As you pass through the arch and into the forest, you hear the buzz
+  of insects and the song of birds in the branches overhead. Little sunlight pierces the thick canopy of the
+  trees, and gloomy shadows cover the trail before you.
+
+============================================================
+HIGH FOREST RANDOM ENCOUNTERS TABLE (Roll 2d6)
+============================================================
+2  – An adult green dragon, attracted by the gleaming lights of the Star Mounts, detects the player
+     characters while passing overhead and decides they would make suitable prey. The dragon crashes through
+     the forest canopy and attacks.
+3  – A badly mutilated corpse clutches a magic item from Treasures of the High Forest. A DC 12 Intelligence
+     (Nature) check reveals the person likely died as a result of an owlbear attack.
+4  – A rare breeze carries the soft sound of an Elven lullaby. Any creature who hears it falls asleep for
+     1d8 minutes then awakens with a wood elf glyph for "anointed" branded into the flesh on the back of its
+     hands. The brand causes no pain and can only be healed via magical means.
+5  – The party stumbles into a marsh occupied by a shambling mound and 1d4 carrion crawlers. The shambling
+     mound turns the plants and animals that it eats into slimy mulch, which provides a ready-to-eat meal for
+     the carrion crawlers.
+6  – The party meets 1d6 friendly woodsmen commoners who offer to give the party directions, granting
+     advantage on the next Wisdom (Survival) check.
+7  – The party discovers a dead elm tree that appears ready to topple. Dozens of small, vaguely
+     human-looking figures made of sticks hang from the tree's branches by tattered lengths of twine. A
+     banshee and 1d10 zombies, all with ragged nooses tied around their necks, emerge from behind the tree
+     and attack.
+8  – A smiling druid (NG half-elf female) named Tharra Shyndle appears in the party's midst and offers to
+     answer three questions about the High Forest, so long as the answer is yes or no. Tharra also mentions
+     that Aerglas, a fellow druid who disappeared several years ago, has returned to the High Forest but is
+     acting strangely. Tharra then disappears into the forest.
+9  – A bandit captain and 1d12 bandits demand the party pay a 100 gp toll to pass through the forest. The
+     bandits attack if the party refuses to pay the toll.
+10 – The party discovers a shimmering pool of water. Any creature who drinks from the pool receives a vision
+     of the Grandfather Tree, an impossibly huge oak tree surrounded by four smaller trees, in the eastern
+     reaches of the High Forest. The vision also includes a brief glimpse of a treasure horde hidden under
+     the Grandfather Tree. (See the "Grandfather Tree" entry in chapter 3 of Storm King's Thunder.)
+11 – An abandoned and vine-covered stone ruin contains a random magic item from Treasures of the High Forest.
+12 – The party finds an ancient standing stone with the Emerald Enclave symbol, a profile of a powerfully
+     built stag, etched into it. Any creature that touches the standing stone activates a teleportation
+     circle that transports them to an identical standing stone inside Shadowtop Cathedral.
+
+Magic Items in this Module: The High Forest random encounters table includes two entries for magic items.
+The author recommends Treasures of the High Forest (also by Fred Love, on the DM's Guild), which contains
+four unique magic items. Dungeon Masters may instead substitute any rare or very rare magic items from the
+Dungeon Master's Guide they find appropriate.
+
+============================================================
+UNICORN IN MOURNING
+============================================================
+If the player characters manage to stick to the trail, they may gain the attention of a unicorn named
+Altheda, who sometimes leaves her home in the Feywild to wander the High Forest.
+
+  Emerging from a grove of trees along the trail is a white horse that shines with radiant beauty. A
+  silver-colored horn protrudes from the middle of the mare's forehead. The unicorn gazes in your direction
+  for a moment before she springs back into the forest.
+
+If the party follows Altheda, they manage to track her to a clearing ringed by five toppled and vine-choked
+standing stones. The unicorn bounds into the center of the ring and vanishes.
+
+  The standing stones that at first appeared toppled and cracked now tower overhead. Glowing orbs of arcane
+  energy bob gently in the sweet-smelling breeze, casting a gentle glow across the clearing. A handful of
+  stars twinkle in the trellis sky. The unicorn paces around an altar at the center of the standing stones.
+
+This clearing is a fey crossing, a place where the barrier between the Material Plane and the Feywild has
+weakened. A pixie named Lolantha flutters toward the party and explains that they've stumbled into the
+domain of Altheda the unicorn. Lolantha tells the party that Altheda mourns the death of her mate, Florian,
+who fled three centuries ago at the hands of a cruel blue dragon. Lolantha asks the party to leave Altheda
+in peace.
+
+If the party approaches the center of the circle, they discover that Florian's horn rests atop the stone
+altar. Encroaching on the altar causes Altheda to grow agitated. If the party tries to remove the horn — a
+virtually priceless artifact with untold magical properties — she will attack. Adventurers who take the
+horn find that dried blood magically stains their hands and can only be washed away with a remove curse
+spell. Any fey creature will attack the party on sight for as long as the curse remains, and members of the
+Emerald Enclave will treat the player characters like the worst sort of criminals.
+
+============================================================
+OVERNIGHT ENCOUNTER
+============================================================
+If the party beds down for the night before reaching Shadowtop Cathedral, Dungeon Masters may consider
+running this encounter.
+
+  Shortly after midnight, any player character still awake catches a glimpse of a spectral figure gliding
+  silently through the trees.
+
+The figure is a ghost, the spirit of a member of an extinct Uthgardt barbarian tribe that once populated the
+High Forest. A coven of hags has moved into a nearby cave network the tribe considered sacred, leaving the
+barbarians' spirits unable to rest. If a player character follows the ghost, they find 1d10 additional
+barbarian ghosts wandering aimlessly through the forest.
+
+The ghosts don't attack unless provoked. If a player character attempts to communicate with a ghost, the
+spirit responds by whispering, "Help us," before vanishing into mist.
+
+Dungeon Master Guidance: This encounter is a good opportunity to introduce the Lesca Stone, a magic item
+detailed in Treasures of the High Forest.
+
+============================================================
+DEEP FOREST
+============================================================
+The party passes into the deep forest once it has made a sufficient number of successful Wisdom (Survival)
+checks to navigate the outer forest. It's recommended the party make two successful checks, though this
+check is made at disadvantage. On a failed check, the Dungeon Master should roll on the High Forest Random
+Encounters Table. On a successful check, run the Disguised Trail Encounter below.
+
+When the player characters make their way into the deep forest, read or paraphrase the following and have
+the party make a Wisdom (Nature) check.
+
+  The air grows stale as you push much deeper into the forest. You no longer hear birdsong or insects.
+  Instead, your ears detect only faint whispers all around you. As you squint into the gloom, you see no
+  signs of the trail.
+
+Disguised Trail Encounter
+The final successful navigation check allows the party to notice a strange occurrence: the forest plants
+appear to be hiding the path.
+
+  Out of the corner of your eye, you catch a glimpse of a shrub shifting its position directly into the
+  middle of your path, as if to conceal the way to Shadowtop Cathedral. A moment later, you hear a hushed
+  voice call out, "Did they notice us? I think they might have noticed us!"
+
+An awakened shrub named Silvia and two awakened trees named Banyan and Linden attempt to prevent hostile
+creatures from finding Shadowtop Cathedral by blocking the path. They are peaceful members of the Emerald
+Enclave and won't attack unless the party gives them a reason to. If the player characters demonstrate a
+respect for nature and peaceful intent, the awakened plants move aside and grant them entrance into
+Shadowtop Cathedral.
+
+============================================================
+SHADOWTOP CATHEDRAL
+============================================================
+  Orderly rows of massive trunks rise out of the ground like pillars holding up a vaulted ceiling of leaves.
+  Intricate paper lanterns hang from the mighty tree branches, providing warm illumination. Trickling through
+  the cathedral like a central aisle is a shimmering brook where rainbow trout swim just below the surface.
+  A heartrendingly beautiful melody fills the air.
+
+The music emanates from a satyr named Greenwhistle who sits beside the brook playing his panpipes. He
+explains that a dryad rejected his romantic overtures, so he's composing a song to try to win her heart. He
+also says Turlang has not been to the cathedral in several days and invites the party to wait with him.
+
+  Suddenly, Tharra Shyndle, the half-elf druid the party may have encountered earlier, rushes into the
+  cathedral in a panic, her face streaked with blood and her garments torn. "Aerglas betrayed us!" she pants.
+  "He defeated Turlang and now he's coming to destroy the cathedral!"
+
+============================================================
+BATTLE FOR SHADOWTOP CATHEDRAL
+============================================================
+Aerglas, a CE elf druid, was once a respected member of the Emerald Enclave. A few months ago, agents of a
+tyrannical kraken named Slarkrethel contacted Aerglas and infected him with promises of power and ancient
+knowledge. Under the nigh-irresistible telepathic influence of the kraken, Aerglas now aims to drive the
+Emerald Enclave from the High Forest and claim Shadowtop Cathedral for Slarkrethel.
+
+A few days ago, Aerglas convinced Turlang to accompany him on an expedition to the heart of the forest.
+Tharra Shyndle, who suspected Aerglas harbored evil intentions, secretly followed them. Aerglas sprung his
+trap, luring Turlang into a ravine where he was attacked by a herd of evil creatures. Turlang fell, but
+Tharra sprang to his aid before Aerglas could strike a killing blow. Tharra fled to Shadowtop Cathedral to
+warn her allies of the betrayal, and Aerglas and his minions pursued her.
+
+Aerglas commands a herd of 1d6+1 owlbears, one of which he rides as a mount. Aerglas and his owlbears charge
+across the battlefield as he casts his attack spells with abandon, shouting "You cannot oppose the kraken!"
+and "For Slarkrethel!" He tries to take down the most capable-looking PC first. If the party kills or
+incapacitates Aerglas's mount, he attempts to hide in the forest, where the foliage offers partial cover for
+a +2 bonus to his AC. The player characters may make similar use of the terrain.
+
+Greenwhistle runs into the forest to warn other creatures as soon as fighting breaks out. Tharra Shyndle may
+stay to defend the cathedral, though she's been reduced to 10 hit points.
+
+Role playing Aerglas — Aerglas speaks with the blank facial expression of someone under telepathic influence.
+  Ideal: Slarkrethel, in all his ancient wisdom, is the rightful ruler of the world. It follows that I, as
+         Slarkrethel's faithful servant, am the rightful ruler of the High Forest.
+  Bond:  I would rather die than allow the Emerald Enclave to continue to hold sway over the High Forest.
+  Flaw:  I cannot allow another spellcaster to show me up.
+
+Role playing Tharra Shyndle
+  Character Trait: Tharra's eyes squint whenever she smiles, which is most of the time.
+  Ideal: We have only one world on which to live. We must protect it from those who would exploit its bounty.
+  Bond:  I will offer anything I have to a friend in need. Material possessions are meaningless without
+         friendship.
+  Flaw:  I often like to play word games instead of answering a question directly.
+
+============================================================
+RESCUING TURLANG
+============================================================
+Once the battle has run its course, the player characters may wish to find Turlang. Tracking the owlbear
+herd back to the site where Aerglas betrayed Turlang requires no check — the herd left an easily discernible
+path of destruction through the forest. Turlang has suffered numerous wounds and has 0 hit points, but he
+has stabilized naturally and will return to consciousness in 1d4 hours. Alternatively, the player characters
+may use healing magic to restore some of his hit points.
+
+Upon awakening, Turlang, a CG treant, is furious about Aerglas but grateful for the help of the party. He
+offers the player characters initiation into the Emerald Enclave and suggests that Tharra, Banyan, Linden
+and Silvia accompany the player characters on the next leg of their journey, wherever that takes them.
+
+Role playing Turlang
+  Character Trait: Turlang strokes his mossy beard thoughtfully before answering any question.
+  Ideal: The entire world would benefit from an expansion of the High Forest.
+  Bond:  Anyone who harms the least creature in my forest must answer to me.
+  Flaw:  I have no interest in politics, art or other matters of civilization — unless they affect the High
+         Forest directly.
+
+Treasure: At whatever point Tharra and the party decide to go separate ways, Tharra gives the player
+characters a pouch containing 1d4+4 silver berries. Swallowing a berry has the same effect as imbibing a
+potion of invisibility.
+
+============================================================
+MORE ADVENTURE IN THE HIGH FOREST
+============================================================
+This adventure combines seamlessly with Treasures of the High Forest, a supplement written by Fred Love and
+available through the Dungeon Master's Guild. It contains four magic items unique to the High Forest designed
+to expand upon and enhance the encounters contained in this adventure.
+
+============================================================
+CREDITS & LEGAL
+============================================================
+This module was designed and written by Fred Love. The cover image resides in the public domain.
+Standard Wizards of the Coast fan-content / DM's Guild legal terms apply (D&D, Forgotten Realms, etc. are
+property of Wizards of the Coast).
