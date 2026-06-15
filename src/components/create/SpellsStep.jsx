@@ -3,6 +3,9 @@ import { getClass, SPELLCASTING, levelOneSpellPicks, cantripCount } from '../../
 import { effectiveAbilities } from '../../lib/rules.js'
 import { spellsByClass } from '../../lib/open5e.js'
 import { StepHeading } from './RaceStep.jsx'
+import InfoTip from '../ui/InfoTip.jsx'
+import Primer from './Primer.jsx'
+import { getSpellNote } from '../../data/srd/spellNotes.js'
 
 // Spell selection for level-1 casters. Pick the right number of cantrips and
 // 1st-level spells; stored in choices.spellSelections = { cantrips:[], spells:[] }.
@@ -66,6 +69,8 @@ export default function SpellsStep({ choices, update }) {
         subtitle={`As a ${klass.name}, ${prepWord} your starting magic (${cfg?.ability?.slice(0, 3).toUpperCase()}-based).`}
       />
 
+      <Primer concepts={['spell_slot', 'cantrip', 'prepared_vs_known']} />
+
       {loading && <p className="text-muted py-6 text-center">Consulting the grimoire…</p>}
       {error && <p className="text-blood py-4">{error}</p>}
 
@@ -99,18 +104,24 @@ function SpellGroup({ title, spells, chosen, onToggle, testId }) {
         {spells.map((s) => {
           const on = chosen.includes(s.name)
           return (
-            <button
-              key={s.slug || s.name}
-              type="button"
-              data-testid={`spell-${(s.slug || s.name)}`}
-              onClick={() => onToggle(s.name)}
-              title={s.school || ''}
-              className={`text-left rounded-lg px-3 py-2 text-sm transition ${
-                on ? 'bg-gold text-ink font-semibold' : 'bg-panel-2 text-parchment hover:brightness-125'
-              }`}
-            >
-              {s.name}
-            </button>
+            <div key={s.slug || s.name} className="relative">
+              <button
+                type="button"
+                data-testid={`spell-${(s.slug || s.name)}`}
+                onClick={() => onToggle(s.name)}
+                className={`w-full text-left rounded-lg px-3 py-2 pr-7 text-sm transition ${
+                  on ? 'bg-gold text-ink font-semibold' : 'bg-panel-2 text-parchment hover:brightness-125'
+                }`}
+              >
+                {s.name}
+              </button>
+              <div className="absolute right-2 top-1.5 z-10">
+                <InfoTip title={s.name}>
+                  {getSpellNote(s.slug) || s.desc || 'Description unavailable.'}
+                  {s.school ? ` (${s.school})` : ''}
+                </InfoTip>
+              </div>
+            </div>
           )
         })}
       </div>
