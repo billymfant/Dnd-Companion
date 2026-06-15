@@ -24,6 +24,7 @@ dist-ssr/
 # Copyrighted source material — do not publish
 *.pdf
 scripts/phb.txt
+scripts/5.5e.txt
 # ...but skill bundles ship their own demo PDFs — keep those
 !.claude/skills/**/*.pdf
 
