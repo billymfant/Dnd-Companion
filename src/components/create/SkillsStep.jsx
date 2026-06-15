@@ -1,6 +1,9 @@
 import { SKILLS } from '../../lib/dnd.js'
 import { getClass, getRace, getSubrace, getBackground } from '../../data/srd/index.js'
 import { StepHeading } from './RaceStep.jsx'
+import InfoTip from '../ui/InfoTip.jsx'
+import Primer from './Primer.jsx'
+import { getSkillInfo } from '../../data/srd/glossary.js'
 
 const SKILL_LABEL = Object.fromEntries(SKILLS.map((s) => [s.key, s.label]))
 
@@ -48,6 +51,7 @@ export default function SkillsStep({ choices, update }) {
   return (
     <div>
       <StepHeading title="Skills & Proficiencies" subtitle="Hone the talents your class lets you choose." />
+      <Primer concepts={['skill', 'proficiency_bonus']} />
 
       <SkillGroup
         title={`Class Skills (${classChosen.length}/${classCount})`}
@@ -89,28 +93,35 @@ function SkillGroup({ title, hint, options, isChosen, isLocked, onToggle }) {
         {options.map((k) => {
           const chosen = isChosen(k)
           const lock = isLocked(k)
+          const skillMeta = SKILLS.find((s) => s.key === k)
           return (
-            <button
-              key={k}
-              type="button"
-              data-testid={`skill-${k}`}
-              onClick={() => onToggle(k)}
-              disabled={lock}
-              className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-left transition ${
-                lock
-                  ? 'bg-ink/40 text-muted cursor-not-allowed'
-                  : chosen
-                  ? 'bg-gold text-ink font-semibold'
-                  : 'bg-panel-2 text-parchment hover:brightness-125'
-              }`}
-            >
-              <span
-                className={`w-3 h-3 rounded-full border shrink-0 ${
-                  chosen || lock ? 'bg-current border-current' : 'border-muted'
+            <div key={k} className="relative">
+              <button
+                type="button"
+                data-testid={`skill-${k}`}
+                onClick={() => onToggle(k)}
+                disabled={lock}
+                className={`flex items-center gap-2 rounded-lg px-3 py-2 pr-7 text-sm text-left transition w-full ${
+                  lock
+                    ? 'bg-ink/40 text-muted cursor-not-allowed'
+                    : chosen
+                    ? 'bg-gold text-ink font-semibold'
+                    : 'bg-panel-2 text-parchment hover:brightness-125'
                 }`}
-              />
-              {SKILL_LABEL[k]}
-            </button>
+              >
+                <span
+                  className={`w-3 h-3 rounded-full border shrink-0 ${
+                    chosen || lock ? 'bg-current border-current' : 'border-muted'
+                  }`}
+                />
+                {SKILL_LABEL[k]}
+              </button>
+              <div className="absolute right-2 top-1.5 z-10">
+                <InfoTip title={skillMeta?.label} ability={getSkillInfo(k)?.ability}>
+                  {getSkillInfo(k)?.short}
+                </InfoTip>
+              </div>
+            </div>
           )
         })}
       </div>
