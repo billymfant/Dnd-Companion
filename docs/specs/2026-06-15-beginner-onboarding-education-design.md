@@ -28,6 +28,32 @@ This is **additive** to the existing wizard (`src/components/create/*`) — no r
   item it describes; synergy as its own pure-data module.
 - **Friendly UI** is a hard requirement; apply `ui-ux-pro-max` / `ui-designer-dark-cinematic`
   at build time. Keep code lean per `karpathy-coder` principles (no premature abstraction).
+- **Two rulesets, ruleset-aware data:** support both **5e 2014** and **5.5e 2024** ("One D&D")
+  as a selectable option, implemented as a `ruleset` dimension in the data — never forked code.
+  2014 ships first (existing data); 2024 is authored from the in-repo source in a later phase.
+
+## Ruleset support (5e 2014 + 5.5e 2024)
+
+The app must let players/DM choose a ruleset. The two are not cosmetic variants — 2024 moves
+things structurally:
+- **Ability score increases come from the *background*, not the race/species** (2014: from race).
+- Races are termed **species**; backgrounds grant an **Origin feat**; weapon mastery exists.
+- Some skills/spells/feature wordings differ.
+
+**Approach:** introduce a `ruleset` value (`'2014' | '2024'`) threaded through the SRD data and
+`lib/rules.js`. The existing SRD files become the **2014** dataset essentially unchanged. A
+parallel **2024** dataset (`src/data/srd/2024/*` or per-entry `ruleset` tags — decided in the
+plan) holds the 2024 species/backgrounds/classes. A creation-time selector picks the ruleset;
+a ruleset only appears as selectable once its content exists, and the default is whichever is
+fully populated (2014 first, flip to 2024 when authored). The DM companion (future) reads the
+same selector so rulings match the table's chosen edition.
+
+**Source:** `DnD 5.5e v1.0 _ GM Binder.pdf` (repo root, 3.8 MB). Extract sections **on demand**
+during the 2024 authoring phase (reuse `scripts/extract-pdf.mjs`) — do not bulk-ingest it.
+
+The **education layer is built ruleset-aware once**: glossary/blurbs/synergy are shared where
+the editions agree and branched only where they differ (notably the ability-bonus source, which
+changes the synergy hint from "race boosts your key stat" to "background/species boosts it").
 
 ## Architecture
 
@@ -96,12 +122,29 @@ only. No schema or Supabase changes; no impact on persistence or realtime.
 - `npm run build` clean (type/import sanity).
 - No new heavy Playwright e2e for this feature.
 
+## Build phases (cost-staged)
+
+1. **Ruleset-aware foundation** — add the `ruleset` dimension to the SRD data + `lib/rules.js`
+   and a creation-time ruleset selector; the existing data becomes the **2014** dataset. Small,
+   structural, no new content.
+2. **Education layer (2014)** — glossary, blurbs/whenToPick, `synergy.js`, `InfoTip`, `Primer`,
+   `MatchBadge`, applied across the wizard steps. This is the bulk of the work.
+3. **2024 dataset & rules** *(follow-on)* — author the 2024 species/backgrounds/classes and the
+   ability-bonus-from-background rule from the GM Binder PDF; light up the 2024 option; the
+   education content branches only where 2024 diverges.
+
+Phases 1–2 are this effort. Phase 3 can be its own plan if we want to ship 2014 first.
+
 ## Out of scope (YAGNI)
 - Full visual synergy graph.
 - Spell notes above level 1.
 - Video/tutorial content.
 
-## Future work (separate cycle)
+## Future work (separate cycles, not designed here)
+- **DM companion:** at-the-table rules-and-decisions assistant for the DM — rules adjudication,
+  condition effects surfaced on the initiative tracker, DC/advantage helpers, monster/encounter
+  lookup. Builds on the existing `RulesLookup` + `DMView` combat tracker and reads the same
+  ruleset selector. This is the app's key differentiator vs. plain character builders; brainstorm
+  it as its own cycle after the education layer.
 - **Admin / story / roadmap subsystem:** DM authors campaign story, quest roadmap, and hands
-  out items / XP / rewards to players; this becomes its own brainstorm → spec → plan after the
-  education layer ships. Captured here only as a pointer, intentionally not designed yet.
+  out items / XP / rewards to players; its own brainstorm → spec → plan. Captured as a pointer.
