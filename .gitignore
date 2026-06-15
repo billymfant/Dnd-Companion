@@ -15,12 +15,17 @@ dist-ssr/
 .DS_Store
 *.log
 
-# Claude Code tooling (installed skills, local agent files)
-.claude/
+# Claude Code tooling — ignore everything local EXCEPT the shared skill set,
+# which we track so the same skills are available on every machine.
+.claude/*
+!.claude/skills/
+.claude/settings.local.json
 
 # Copyrighted source material — do not publish
 *.pdf
 scripts/phb.txt
+# ...but skill bundles ship their own demo PDFs — keep those
+!.claude/skills/**/*.pdf
 
 # Stray screenshots dropped in the project root
 /image.png
