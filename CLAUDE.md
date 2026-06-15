@@ -16,9 +16,13 @@ Repo: https://github.com/billymfant/Dnd-Companion (push/pull to sync across mach
 - **Shell:** PowerShell (primary) + a Bash tool. The harness resets shell cwd between commands.
 - **Keep all artifacts in-app:** every plan/spec/doc goes in `F:\APPS\DnD Companion\docs\`, never in
   `C:\Users\...\.claude`. The user works from Windows Explorer and can't see out-of-tree files.
-- **Skills:** 56 skills are installed in `.claude/skills/` (hidden dot-folder; visible index at
-  `docs/INSTALLED-SKILLS.txt`). Use `impeccable`/`high-end-visual-design`/`ui-ux-pro-max` for UI,
+- **Skills:** 281 skills are installed in `.claude/skills/` (hidden dot-folder; visible index at
+  `docs/INSTALLED-SKILLS.txt`). These are now **tracked in git** (un-ignored in `.gitignore`) so the
+  same set syncs to every machine via clone/pull — only `.claude/settings.local.json` stays local.
+  Use `ui-ux-pro-max`/`ui-designer-dark-cinematic`/`high-end-visual-design` for UI, the superpowers
   `test-driven-development`/`systematic-debugging`/`verification-before-completion` for quality.
+  `.claude/skills/composio-skills/` holds 833 nested API connectors left inert by choice (not
+  auto-discovered, no context cost) — ask to flatten a specific one if ever needed.
 
 ## Tech stack
 React 18 + Vite 5 · Tailwind v4 (`@tailwindcss/vite`) · React Router 6 · Zustand 4 (persisted) ·
