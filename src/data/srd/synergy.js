@@ -13,7 +13,7 @@ export const KEY_ABILITIES = {
   rogue: ['dexterity', 'intelligence'],
   sorcerer: ['charisma', 'constitution'],
   warlock: ['charisma', 'constitution'],
-  wizard: ['intelligence', 'constitution'],
+  wizard: ['intelligence', 'constitution', 'dexterity'], // dex helps AC and initiative for unarmored wizards
 }
 
 // Full suggested placement order (highest score first) per class.
