@@ -1,6 +1,10 @@
 import { RACES, getRace } from '../../data/srd/index.js'
 import { ABILITIES } from '../../lib/dnd.js'
 import OptionCard from './OptionCard.jsx'
+import InfoTip from '../ui/InfoTip.jsx'
+import Primer from './Primer.jsx'
+import MatchBadge from './MatchBadge.jsx'
+import { raceMatch } from '../../lib/synergy.js'
 
 // Step 1 — choose a race, then a subrace (if any), and any racial ability
 // choices (e.g. Half-Elf's two +1s).
@@ -37,6 +41,7 @@ export default function RaceStep({ choices, update }) {
 
   return (
     <div>
+      <Primer concepts={['race', 'subrace', 'ability_score']} />
       <StepHeading title="Choose your Race" subtitle="Your lineage shapes your gifts and bearing." />
 
       <div className="grid sm:grid-cols-2 gap-3">
@@ -48,6 +53,13 @@ export default function RaceStep({ choices, update }) {
             title={r.name}
             subtitle={`Speed ${r.speed} ft · ${r.size}`}
             onClick={() => pickRace(r.key)}
+            info={
+              <InfoTip title={r.name}>
+                {r.blurb} {r.whenToPick}
+                {r.traits?.length ? ` Traits: ${r.traits.map((t) => t.name).join(', ')}.` : ''}
+              </InfoTip>
+            }
+            badge={choices.classKey ? <MatchBadge level={raceMatch(choices.classKey, r.key, null)} /> : null}
           >
             {formatBonuses(r.abilityBonuses)}
             {r.choiceBonuses ? ` · +${r.choiceBonuses.amount}×${r.choiceBonuses.count} of choice` : ''}
