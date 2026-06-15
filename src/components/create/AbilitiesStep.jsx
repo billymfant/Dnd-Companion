@@ -10,6 +10,10 @@ import {
 } from '../../data/srd/index.js'
 import { StepHeading } from './RaceStep.jsx'
 import Card from '../ui/Card.jsx'
+import InfoTip from '../ui/InfoTip.jsx'
+import Primer from './Primer.jsx'
+import { getAbilityInfo } from '../../data/srd/glossary.js'
+import { suggestAbilityOrder } from '../../lib/synergy.js'
 
 const METHODS = [
   { key: 'standard', label: 'Standard Array' },
@@ -37,6 +41,16 @@ export default function AbilitiesStep({ choices, update }) {
   return (
     <div>
       <StepHeading title="Ability Scores" subtitle="The raw talent behind every roll. Racial bonuses are added for you." />
+      <Primer concepts={['ability_score', 'ability_modifier']} />
+      {choices.classKey && (
+        <p className="mb-3 rounded-lg bg-panel-2 px-3 py-2 text-xs text-parchment">
+          Tip for a <span className="text-gold">{choices.classKey}</span>: put your highest scores in{' '}
+          <span className="text-gold">
+            {suggestAbilityOrder(choices.classKey).slice(0, 2)
+              .map((k) => ABILITIES.find((a) => a.key === k)?.label).join(' & ')}
+          </span>.
+        </p>
+      )}
 
       {/* Method tabs */}
       <div className="flex gap-2 mb-4">
@@ -115,7 +129,10 @@ function PoolAssign({ base, update, method, pool, onRoll }) {
         const current = base[a.key]
         return (
           <div key={a.key} className="flex items-center gap-3">
-            <span className="w-12 text-sm font-semibold text-parchment">{a.label}</span>
+            <span className="w-12 text-sm font-semibold text-parchment flex items-center gap-1">
+              {a.label}
+              <InfoTip title={a.label} ability={a.key}>{getAbilityInfo(a.key)?.detail}</InfoTip>
+            </span>
             <select
               value={current ?? ''}
               onChange={(e) => assign(a.key, e.target.value)}
@@ -167,7 +184,10 @@ function PointBuy({ base, update, method }) {
           const v = base[a.key] ?? POINT_BUY_MIN
           return (
             <div key={a.key} className="flex items-center gap-3">
-              <span className="w-12 text-sm font-semibold text-parchment">{a.label}</span>
+              <span className="w-12 text-sm font-semibold text-parchment flex items-center gap-1">
+                {a.label}
+                <InfoTip title={a.label} ability={a.key}>{getAbilityInfo(a.key)?.detail}</InfoTip>
+              </span>
               <button
                 type="button"
                 onClick={() => step(a.key, -1)}
