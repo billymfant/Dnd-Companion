@@ -5,6 +5,7 @@ import CombatTracker from '../components/CombatTracker.jsx'
 import DiceRoller from '../components/DiceRoller.jsx'
 import RulesLookup from '../components/RulesLookup.jsx'
 import SessionNotes from '../components/SessionNotes.jsx'
+import CampaignCodex from '../components/CampaignCodex.jsx'
 
 // Tabs for the DM dashboard. Each phase fills one in.
 const TABS = [
@@ -13,6 +14,7 @@ const TABS = [
   { key: 'dice', label: '🎲 Dice' },
   { key: 'rules', label: '📖 Rules' },
   { key: 'notes', label: '📜 Notes' },
+  { key: 'codex', label: '📕 Codex' },
 ]
 
 export default function DMView() {
@@ -61,6 +63,7 @@ export default function DMView() {
         {tab === 'dice' && <DiceRoller sessionId={session?.id} rollerName="DM" />}
         {tab === 'rules' && <RulesLookup />}
         {tab === 'notes' && <SessionNotes sessionId={session?.id} />}
+        {tab === 'codex' && <CampaignCodex sessionId={session?.id} />}
       </main>
     </div>
   )

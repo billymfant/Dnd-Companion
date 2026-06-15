@@ -82,6 +82,19 @@ create table if not exists public.notes (
   updated_at timestamptz not null default now()
 );
 
+-- ---------- lore_entries (Campaign Codex, revealable lore) --
+create table if not exists public.lore_entries (
+  id          uuid primary key default gen_random_uuid(),
+  session_id  uuid not null references public.sessions(id) on delete cascade,
+  category    text not null default 'story',  -- story | npc | location | faction
+  title       text not null,
+  body        text not null default '',
+  revealed    boolean not null default false,
+  sort_order  int not null default 0,
+  created_at  timestamptz not null default now(),
+  updated_at  timestamptz not null default now()
+);
+
 -- ============================================================
 --  Row Level Security
 --  This app uses PIN matching, not Supabase Auth, so the anon
@@ -94,11 +107,12 @@ alter table public.characters enable row level security;
 alter table public.combat     enable row level security;
 alter table public.dice_rolls enable row level security;
 alter table public.notes      enable row level security;
+alter table public.lore_entries enable row level security;
 
 do $$
 declare t text;
 begin
-  foreach t in array array['sessions','characters','combat','dice_rolls','notes']
+  foreach t in array array['sessions','characters','combat','dice_rolls','notes','lore_entries']
   loop
     execute format(
       'drop policy if exists "anon_all_%1$s" on public.%1$s;', t);
@@ -116,7 +130,7 @@ end $$;
 do $$
 declare t text;
 begin
-  foreach t in array array['characters','combat','dice_rolls']
+  foreach t in array array['characters','combat','dice_rolls','lore_entries']
   loop
     begin
       execute format('alter publication supabase_realtime add table public.%I', t);
@@ -131,6 +145,7 @@ end $$;
 alter table public.characters replica identity full;
 alter table public.combat     replica identity full;
 alter table public.dice_rolls replica identity full;
+alter table public.lore_entries replica identity full;
 
 -- ============================================================
 --  Storage — public `avatars` bucket for character portraits.

@@ -16,6 +16,7 @@ import SpellbookPanel from '../components/SpellbookPanel.jsx'
 import InventoryPanel from '../components/InventoryPanel.jsx'
 import CombatStatePanel from '../components/CombatStatePanel.jsx'
 import InitiativeOrder from '../components/InitiativeOrder.jsx'
+import PlayerJournal from '../components/PlayerJournal.jsx'
 import DiceRoller from '../components/DiceRoller.jsx'
 
 // The player's own character sheet. Reads the character with a realtime
@@ -172,6 +173,9 @@ export default function PlayerView() {
             <p className="text-sm text-muted whitespace-pre-wrap">{character.backstory}</p>
           </Card>
         )}
+
+        {/* Campaign Journal (DM-revealed lore) */}
+        <PlayerJournal sessionId={character.session_id} />
 
         {/* Dice roller + shared log */}
         <div>

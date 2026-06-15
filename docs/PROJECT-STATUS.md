@@ -10,6 +10,9 @@ All planned work is **built and verified**:
   - S1 accounts (join code = password) · S2 creation wizard + rules engine ·
     S3 caster subclass/spells · S4 level-up 2→20 · S5 inventory & combat state ·
     S6 avatars (gallery + upload) · S7 integration & polish.
+- **Beginner Education Layer (5e 2014)** + **Campaign Codex** (DM authors private lore → 👁 reveal to
+  the read-only player Journal, live via Realtime). Codex migration is applied to the shared Supabase
+  project. See `docs/ROADMAP.md`.
 
 **Verification:** `node scripts/test-rules.mjs` = 48 unit checks; the `scripts/e2e-*.mjs`
 suite (~88 checks) is green; `npm run build` clean.
