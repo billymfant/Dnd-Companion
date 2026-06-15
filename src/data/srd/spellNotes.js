@@ -1,0 +1,50 @@
+// Beginner "when it's good" notes for common cantrips & 1st-level spells,
+// keyed by Open5e slug. The spell's mechanical text comes from the API `desc`;
+// this adds plain-language guidance on WHEN to pick/use it. Unlisted spells
+// fall back to the API description (getSpellNote returns null).
+export const SPELL_NOTES = {
+  // ---- Cantrips (level 0) -----------------------------------------------
+  'fire-bolt': 'Your reliable ranged attack cantrip — good damage at range, never runs out.',
+  'mage-hand': 'A floating hand for fiddly tasks: pull levers, grab items, trigger traps from afar.',
+  'guidance': 'Give an ally a d4 bonus to their next ability check — great to cast on someone about to pick a lock or persuade a noble.',
+  'sacred-flame': 'The cleric\'s ranged attack cantrip — targets Dexterity so armour doesn\'t help the enemy.',
+  'prestidigitation': 'The "do minor magical stuff" cantrip — clean clothes, create smells, light candles, impress commoners. Mostly roleplaying utility.',
+  'thaumaturgy': 'Make dramatic effects like booming voices or flickering flames. Great for intimidating people or creating distractions.',
+  'eldritch-blast': 'The warlock\'s signature beam attack — strong damage and you can add upgrades to push, pull, or slow enemies.',
+  'vicious-mockery': 'Insult an enemy so badly they take psychic damage and have disadvantage on their next attack roll. Great crowd-control cantrip.',
+  'toll-the-dead': 'Deals more damage to injured enemies than most attack cantrips — ideal if you want a powerful single-target cantrip.',
+  'chill-touch': 'Deals necrotic damage and stops the target from healing — useful against enemies that regenerate.',
+  'shocking-grasp': 'Zap someone up close and stop them from using their reaction (like attacking back as you run away).',
+  'light': 'Make an object glow like a torch. Cheaper than torches and frees up a hand — useful in dark dungeons.',
+  'minor-illusion': 'Create a small sound or image. Versatile for distractions, bluffs, and creative problem-solving.',
+  'poison-spray': 'High damage in your face — good raw numbers but only works at very close range.',
+  'ray-of-frost': 'Deals cold damage and slows the target\'s movement, making it easier for allies to close in or escape.',
+  'true-strike': 'Give yourself advantage on your next attack. Generally weaker than just attacking twice — skip it for beginners.',
+  'dancing-lights': 'Create four small floating lights you can move around. Good for lighting up large areas or signalling.',
+  // ---- Level 1 spells ---------------------------------------------------
+  'cure-wounds': 'Touch an ally to heal them in a pinch — the bread-and-butter healing spell.',
+  'healing-word': 'Heal an ally from a distance as a bonus action — lets you attack or do something else on the same turn. Often better than Cure Wounds mid-fight.',
+  'shield': 'Instant reaction that boosts your AC by +5 until next turn — can turn a hit into a miss right after you see the attack roll.',
+  'magic-missile': 'Three guaranteed hits at once — no attack roll, no chance to miss. Great for finishing off enemies on low HP.',
+  'sleep': 'Knocks out weaker enemies without a save — powerful at low levels, less useful later when foes have more HP.',
+  'thunderwave': 'Blast a wave of thunder that damages and pushes enemies away — good for crowd control at close range.',
+  'faerie-fire': 'Coat enemies in magical light so all attacks against them have advantage. One of the best support spells for teams.',
+  'bless': 'Up to three allies add a d4 to their attack rolls and saving throws. Strong team buff that scales well all adventuring day.',
+  'hunters-mark': 'Mark an enemy for bonus damage on every hit and track them if they flee — the ranger\'s go-to hunting spell.',
+  'hex': 'Curse an enemy to take extra necrotic damage and have disadvantage on an ability check — warlock\'s reliable damage booster.',
+  'charm-person': 'Make a humanoid friendly toward you for an hour — great for avoiding fights or gathering information.',
+  'detect-magic': 'Sense the presence and school of magic nearby — useful for finding hidden enchantments, cursed items, or invisible creatures.',
+  'mage-armor': 'Set your AC to 13 + DEX modifier without wearing real armour — essential for wizards and sorcerers who want to stay protected.',
+  'burning-hands': 'Cone of fire that hits everything in front of you — good area damage when enemies cluster together.',
+  'thunderous-smite': 'Charge a weapon strike with thunder damage that can knock a target prone — a paladin\'s strong opening attack.',
+  'divine-favor': 'Your weapon strikes deal extra radiant damage each hit until the spell ends — solid consistent damage for paladins.',
+  'protection-from-evil-and-good': 'Protect an ally from attacks by undead, fiends, fey, and other creature types — great when you know what you\'re fighting.',
+  'entangle': 'Vines burst from the ground and restrain creatures in an area — fantastic crowd control that can lock down several enemies at once.',
+  'goodberry': 'Create 10 magical berries that each heal 1 HP and count as a day\'s food — cheap, reliable between-fight healing.',
+  'absorb-elements': 'Absorb incoming elemental damage to halve it, then add it to your next melee hit — great reactive defence for casters.',
+  'identify': 'Learn exactly what a magic item does or what spell is affecting a creature — removes the guesswork from mysterious items.',
+  'feather-fall': 'Slow your fall to avoid taking damage — a pure lifesaver, literally, when you or an ally gets knocked off something high.',
+  'longstrider': 'Increase a creature\'s walking speed by 10 ft for an hour — great utility buff for slow characters or a whole party.',
+}
+
+export const getSpellNote = (slug) => SPELL_NOTES[slug] || null
